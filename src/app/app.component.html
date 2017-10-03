@@ -1,0 +1,27 @@
+<app-search-text [(searchText)]="searchText"></app-search-text>
+<input type="text" [(ngModel)]="searchText" placeholder="Search by FirstName or DoctorName ---------- Usage: 'Name Marge'  /  'Doctor Akira'" />
+
+<button (click)="search()">Search</button>
+<button (click)="refresh()">Refresh</button>
+<table>
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email Address</th>
+      <th>Profile Image</th>
+      <th>Doctor Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let patient of displayedPatients">
+      <td>{{ patient.FName }}</td>
+      <td>{{ patient.LName }}</td>
+      <td>{{ patient.emailAddress }}</td>
+      <td>
+        <img height="80px" width="65px" src="{{ patient.profileImage }}" />
+      </td>
+      <td>{{ patient.doctorName }}</td>
+    </tr>
+  </tbody>
+</table>
