@@ -6,3 +6,8 @@ HOMEWORK: #3
 COMPLEXITY: 7
 [ROUGH ESTIMATE] APPROXIMATION OF HOURS INVESTED IN ASSIGNMENT: 6hrs
 EXPECTED GRADE: A, 
+
+Run Instruction:
+npm install
+then
+ng server -open
